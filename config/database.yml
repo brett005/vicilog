@@ -52,3 +52,18 @@ production:
   database: vicilog_production
   username: vicilog
   password: <%= ENV['VICILOG_DATABASE_PASSWORD'] %>
+
+
+vicidial_db:
+  adapter: mysql2
+  encoding: utf8
+  database: asterisk
+  username: <%= ENV["VICIDIAL_USER"] %>
+  password: <%= ENV["VICIDIAL_PASS"] %>
+  host: <%= ENV["VICIDIAL_HOST"] %>
+  port: 3306
+
+# Create file /config/application.yml with the data:
+# VICIDIAL_USER: "user_database"
+# VICIDIAL_PASS: "password_databases"
+# VICIDIAL_HOST: "ip_vicidial_database"
